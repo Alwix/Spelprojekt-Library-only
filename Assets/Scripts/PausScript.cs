@@ -33,4 +33,23 @@ public class PausScript : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+
+    public void Resume()
+    {
+        paused = false;
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(name);
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(name);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+
 }
