@@ -17,8 +17,20 @@ public class PausScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetButtonDown("Pause"))
+        {
+            paused = !paused;
+        }
 
+        if(paused)
+        {
+            PausMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            PausMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
-
 }
