@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
-{
+{   
     public Transform mainMenu, optionsMenu;
 
     public void LoadScene(string name)
