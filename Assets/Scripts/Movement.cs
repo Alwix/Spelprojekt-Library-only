@@ -20,7 +20,16 @@ public class Movement : MonoBehaviour {
         //GetComponent<Rigidbody2D>().AddForce(Vector2.right * Input.GetAxis("Horizontal") * speed);
         //GetComponent<Rigidbody2D>().AddForce(Vector2.up * Input.GetAxis("Vertical") * speed);
         GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
 
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+        }
         var bottomLeft = camera.ScreenToWorldPoint(Vector3.zero);
         var topRight = camera.ScreenToWorldPoint(new Vector3(
             camera.pixelWidth, camera.pixelHeight));
